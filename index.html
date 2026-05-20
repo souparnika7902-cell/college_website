@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Polytechnic College Perinthalmanna | Home</title>
+    <meta name="description" content="Government Polytechnic College Perinthalmanna, empowering technical education since 1961. Offering diploma programs in Civil, Mechanical, Electronics, and EEE.">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Government Polytechnic College Perinthalmanna">
+    <meta property="og:description" content="A centre of excellence moulding technically competent engineers.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(11, 61, 145, 0.8), rgba(11, 61, 145, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+        
+        .hero-content {
+            color: white;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+            font-family: var(--font-body);
+            opacity: 0.9;
+        }
+
+        .stats-section {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 4rem 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Departments Grid */
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .why-choose {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .principal-msg {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .principal-msg::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+
+        .principal-img {
+            flex-shrink: 0;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-color);
+        }
+
+        @media (max-width: 900px) {
+            .principal-msg {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+        }
+        
+        .news-ticker {
+            background: var(--accent-color);
+            color: #111;
+            padding: 10px 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translate3d(100%, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/60x60/0B3D91/FFFFFF?text=Logo" alt="GPTC Logo" style="border-radius:50%">
+                <div class="logo-text">
+                    <span class="logo-title">GPTC Perinthalmanna</span>
+                    <span class="logo-subtitle">Estd. 1961 | Govt. of Kerala</span>
+                </div>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="departments.html" class="nav-link">Departments</a>
+                <a href="admissions.html" class="nav-link">Admissions</a>
+                <a href="facilities.html" class="nav-link">Facilities</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Mobile Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- News Ticker -->
+    <div class="news-ticker" style="margin-top: 80px;">
+        <div class="container" style="display:flex;">
+            <div style="font-weight:700; padding-right:20px; border-right: 2px solid #333; margin-right: 20px;">Latest Updates</div>
+            <div class="ticker-wrap">
+                <div class="ticker-move">
+                    Admissions open for 2026 academic year. Apply now! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; TechFest 2026 registration starting next week. &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Placement drive by top MNCs on 15th next month.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title slide-up">Empowering Technical Education Since 1961</h1>
+                <p class="hero-subtitle slide-up delay-200">
+                    <span class="typing-container">Moulding technically competent engineers for industry expertise.</span>
+                </p>
+                <div class="hero-btns slide-up delay-400" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="admissions.html" class="btn btn-accent">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="about.html" class="btn btn-primary" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px);">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="container" style="position:relative; z-index:10;">
+        <div class="stats-section reveal-scale">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="1961">0</span></h3>
+                    <p>Established Year</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="4">0</span></h3>
+                    <p>Diploma Branches</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="1500">0</span>+</h3>
+                    <p>Current Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="10000">0</span>+</h3>
+                    <p>Alumni</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Preview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Welcome to GPTC</h2>
+                <p class="section-subtitle">A premier institution under the Directorate of Technical Education, Kerala, imparting quality engineering diploma education.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center; margin-top: 3rem;">
+                <div class="reveal-left">
+                    <div class="hover-zoom" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Campus Image">
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <h3 style="font-size: 2rem; color: var(--primary-color);">Our Vision</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">To be a centre of excellence to mould technically competent engineers for industry expertise and social development.</p>
+                    <ul style="margin-bottom: 2rem; list-style: none;">
+                        <li style="margin-bottom: 1rem; display: flex; gap: 1rem;"><i class="fa-solid fa-check text-accent"></i> Impart quality technical education and skills</li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 1rem;"><i class="fa-solid fa-check text-accent"></i> Develop engineering professionals</li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 1rem;"><i class="fa-solid fa-check text-accent"></i> Promote innovation and entrepreneurship</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline">Read Our History</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Overview -->
+    <section class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Our Departments</h2>
+                <p class="section-subtitle">Offering specialized 3-year diploma programs to build the technocrats of tomorrow.</p>
+            </div>
+            <div class="dept-grid">
+                <div class="card reveal delay-100">
+                    <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3 class="card-title">Civil Engineering</h3>
+                    <p>Building the foundation of modern infrastructure with advanced surveying and construction labs.</p>
+                    <a href="departments.html" style="color: var(--primary-light); font-weight: 600; margin-top: 1rem; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card reveal delay-200">
+                    <div class="card-icon"><i class="fa-solid fa-cogs"></i></div>
+                    <h3 class="card-title">Mechanical Engineering</h3>
+                    <p>Focusing on design, manufacturing, and maintenance of mechanical systems.</p>
+                    <a href="departments.html" style="color: var(--primary-light); font-weight: 600; margin-top: 1rem; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card reveal delay-300">
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="card-title">Electronics Engineering</h3>
+                    <p>Exploring the world of embedded systems, communication, and microprocessors.</p>
+                    <a href="departments.html" style="color: var(--primary-light); font-weight: 600; margin-top: 1rem; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card reveal delay-400">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="card-title">Electrical & Electronics</h3>
+                    <p>Powering the future with deep knowledge in power systems, machines, and control.</p>
+                    <a href="departments.html" style="color: var(--primary-light); font-weight: 600; margin-top: 1rem; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding why-choose">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Why Choose GPTC?</h2>
+            </div>
+            <div class="features-grid" style="margin-top: 3rem;">
+                <div class="text-center reveal delay-100">
+                    <i class="fa-solid fa-user-tie" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h4>Experienced Faculty</h4>
+                    <p style="color: var(--text-secondary);">Highly qualified faculty members dedicated to student success.</p>
+                </div>
+                <div class="text-center reveal delay-200">
+                    <i class="fa-solid fa-briefcase" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h4>Placement Support</h4>
+                    <p style="color: var(--text-secondary);">Active placement cell bringing top companies to campus.</p>
+                </div>
+                <div class="text-center reveal delay-300">
+                    <i class="fa-solid fa-flask" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h4>Modern Labs</h4>
+                    <p style="color: var(--text-secondary);">State-of-the-art laboratories and workshops for practical exposure.</p>
+                </div>
+                <div class="text-center reveal delay-400">
+                    <i class="fa-solid fa-book-open-reader" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h4>Vast Library</h4>
+                    <p style="color: var(--text-secondary);">Extensive collection of academic books, journals, and digital resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal Message -->
+    <section class="section-padding">
+        <div class="container reveal-scale">
+            <div class="principal-msg">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Principal" class="principal-img">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Principal's Message</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                        "Education is not just about gaining knowledge, but about developing the right attitude and skills to face the challenges of the modern world. At GPTC Perinthalmanna, we are committed to providing an environment that fosters innovation, ethical values, and technical excellence."
+                    </p>
+                    <h4 style="font-size: 1.2rem; color: var(--accent-color);">Dr. John Doe</h4>
+                    <p style="opacity: 0.8;">Principal, GPTC Perinthalmanna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>GPTC Perinthalmanna</h3>
+                    <p>Empowering Technical Education Since 1961. Moulding technically competent engineers for industry expertise and social development.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="faculty.html">Our Faculty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Alumni Portal</a></li>
+                        <li><a href="#">Student Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Angadipuram, Malappuram,<br>Kerala, India - 679321</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 4933 227 253</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@gptcperinthalmanna.ac.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Government Polytechnic College Perinthalmanna. All Rights Reserved. Designed by Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
